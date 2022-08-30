@@ -13,31 +13,25 @@
       <meta name="theme-color" content="#ffffff">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <script>
-	  function download() {
-		 const swalWithBootstrapButtons = Swal.mixin({
-  buttonsStyling: false
-})
 
-swalWithBootstrapButtons.fire({
+	   <script type="text/javascript">
+		function download() {
+		Swal.fire({
   title: 'Notice',
-  text: "Before you can download the exploit, you'll go through a Linkvertise which shows ads before you can download HexSploit. Do you wish to continue?",
+  text: "Before you can download the exploit, you'll go through a Linkvertise which shows ads before you can download HexSploit. Do you wish to continue??",
   icon: 'info',
   showCancelButton: true,
-  confirmButtonText: 'Yes',
-  cancelButtonText: 'No',
-  reverseButtons: true
+  confirmButtonColor: '#262626',
+  cancelButtonColor: '#ff0000',
+background: '#3b3b3b',
+  confirmButtonText: 'Yes'
 }).then((result) => {
   if (result.isConfirmed) {
     window.location.assign("https://direct-link.net/488746/hexsploit-download");
-  } else if (
-    /* Read more about handling dismissals below */
-    result.dismiss === Swal.DismissReason.cancel
-  ) {
-    swalWithBootstrapButtons.Close()
   }
-}) 
-	  }
-      </script>
+})
+		}
+	</script>
       <style>
          .box {
          background-color: rgb(38,38,38);

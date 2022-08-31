@@ -20,7 +20,7 @@
 function loadCaptcha() {
   Swal.fire({
   title: 'Please Verify You Are Not A Robot',
-  html: '<div id="recaptcha"></div>',
+  html: '<center><div id="recaptcha"></div></center>',
     allowOutsideClick: false,
   didOpen: () => {
     grecaptcha.render('recaptcha', {
@@ -37,6 +37,9 @@ function loadCaptcha() {
   position: 'top-end',
   showConfirmButton: false,
   timer: 3000,
+          confirmButtonColor: '#262626',
+        color: 'white',
+        background: '#3b3b3b',
   timerProgressBar: true,
   didOpen: (toast) => {
     toast.addEventListener('mouseenter', Swal.stopTimer)

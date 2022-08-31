@@ -13,9 +13,48 @@
       <meta name="msapplication-TileColor" content="#da532c">
       <meta name="theme-color" content="#4e4e4e">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script>
+        
+function loadCaptcha() {
+  Swal.fire({
+  title: 'Please Verify You Are Not A Robot',
+  html: '<div id="recaptcha"></div>',
+    allowOutsideClick: false,
+  didOpen: () => {
+    grecaptcha.render('recaptcha', {
+      'sitekey': '6LdOcMIhAAAAACRFqHjkfeWm9oo3QK8MphQdHwyK'
+    })
+  },
+  preConfirm: function () {
+    if (grecaptcha.getResponse().length === 0) {
+      Swal.showValidationMessage(`Make sure you did the captcha correctly and try again`)
+    }
+    else {
+      const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+})
+
+Toast.fire({
+  icon: 'success',
+  title: 'Successfuly Completed Captcha!'
+})
+    }
+  }
+})
+
+}
+      </script>
           <style>
          .box {
-         background-color: rgb(38,38,38);
+         background-color: rgb(48,48,48);
          width: 250px;
          padding: 25px;
          margin: 20px;
@@ -25,32 +64,35 @@
       </style>
     </head>
     <body style="background-color:#4e4e4e">
-      <center>
-      <div class="box" style="">
-            <h1 style="display:inline;">Checkpoint 2</h3>
-            <br>
-            <h4>Press below to go to your final Linkvertise</h4>
-        <a href="">
-            <button style="
-               background: rgb(38,38,38);
+<center><br><br>
+    <br><br><br><br>
+<div class="box" style="">
+<h1 style="display:inline;">Checkpoint 2</h1>
+<br>
+<h4>Press below to go to your final Linkvertise</h4>
+<a href="">
+<button style="
+               background: rgb(38 38 38);
                border: none;
                border-radius: 10px;
                width: 250px;
                height: 50px;
                cursor: pointer;
                " onclick="download();">
-               <i class="fa-solid fa-download" style="
+<i class="fa-solid fa-download" style="
                   display: inline;
                   color: white;
                   "></i>
-               <p style="
+<p style="
                   font-family: 'proxima-nova';
                   color: white;
                   display: inline;
                   ">Go to Linkvertise</p>
-            </button>
-         </a>
-         </div>
-      </center>
-    </body>
+</button>
+</a>
+</div>
+</center>
+
+
+<iframe id="nr-ext-rsicon" style="position: absolute; display: none; width: 50px; height: 50px; z-index: 2147483647; border-style: none; background: transparent;"></iframe></body>
 </html>

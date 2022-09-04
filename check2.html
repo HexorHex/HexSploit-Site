@@ -22,6 +22,9 @@ function loadCaptcha() {
   title: 'Please Verify You Are Not A Robot',
   html: '<center><div id="recaptcha"></div></center>',
     allowOutsideClick: false,
+      confirmButtonColor: '#262626',
+  color: 'white',
+  background: '#3b3b3b',
   didOpen: () => {
     grecaptcha.render('recaptcha', {
       'sitekey': '6LdOcMIhAAAAACRFqHjkfeWm9oo3QK8MphQdHwyK'

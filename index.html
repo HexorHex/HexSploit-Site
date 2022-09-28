@@ -105,16 +105,6 @@ color: 'white',
   cancelButtonColor: '#ff0000',
 background: '#3b3b3b',
 			})
-			   function notupdating() {
-			   	  		Swal.fire({
-  title: 'Warning',
-  text: "We cannot check if HexorSploit is working or not.",
-  icon: 'warning',
-color: 'white',
-  confirmButtonColor: '#262626',
-  cancelButtonColor: '#ff0000',
-background: '#3b3b3b',
-			})
 							  }
 getText("https://cors-anywhere.herokuapp.co/https://cdn.wearedevs.net/software/exploitapi/latestdata.json");
 
@@ -136,7 +126,6 @@ let name = month[d.getMonth()];
   }
    else {
     	document.getElementById("status").innerHTML = "We could not get if the exploit is broken or not... Try refreshing the page - " + name + " " + d.getDate();
-	   notupdating();
     }
 }
 </script>

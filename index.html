@@ -119,12 +119,16 @@ const d = new Date();
 let name = month[d.getMonth()];
   if (status == "true") {
     document.getElementById("status").innerHTML = "The exploit is broken - Please wait while we fix the WRD Exploit API - " + name + " " + d.getDate();
+    document.getElementById('statusicon').src = "offline.png";
     notworking();
 }
   else  if (status == "false") {
       document.getElementById("status").innerHTML = "The exploit is working - " + name + " " + d.getDate();
+      document.getElementById('statusicon').src = "online.png";
+
   }
    else {
+	document.getElementById('statusicon').src = "kindaoffine.png";
     	document.getElementById("status").innerHTML = "We could not get if the exploit is broken or not... Try refreshing the page - " + name + " " + d.getDate();
     }
 }
@@ -186,7 +190,7 @@ let name = month[d.getMonth()];
       <div class="topnav" id="myTopnav">
          <a href="/" class="active" style="float:left;"><img src="/hex.png" width=50></a>
          <a href="javascript:void(0)" style="float:left;" onclick="download2();"><i class="fa-solid fa-download"></i><span> Download</span></a>
-         <a href="https://status.hexorsploit.cf" style="float:left;"><i class="fa-solid fa-circle-exclamation"></i><span> Status Page</span></a>
+         <a href="https://status.hexorsploit.cf" style="float:left; display:none"><i class="fa-solid fa-circle-exclamation"></i><span> Status Page</span></a>
          <a href="mailto:support@hexorsploit.cf" style="float:left;"><i class="fa-solid fa-life-ring"></i><span> Support</span></a>
          <a href="javascript:void(0);" class="icon" onclick="myFunction()"  style="float:right;">
          <i class="fa-solid fa-bars"></i>
@@ -229,7 +233,7 @@ let name = month[d.getMonth()];
             </button>
          </a>
 	      <br>
-	      <img style="width: 30px;height:auto;display:inline;    vertical-align: middle;" alt="icon" src="/online.png"/><span id="status" style="display:inline;font-weight:550;">Hmmm... Seems as we cannot check if HexorSploit is working</span>
+	      <img style="width: 30px;height:auto;display:inline;    vertical-align: middle;" alt="icon" src="/online.png" id="statusicon" /><span id="status" style="display:inline;font-weight:550;">Hmmm... Seems as we cannot check if HexorSploit is working</span>
          <br><br><br><br>
 	      <div class="box" style="">
             <a href="javascript:void(0);" style="height:max-content; text-decoration:none;     vertical-align: middle;" target="_blank">

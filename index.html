@@ -95,6 +95,17 @@ background: '#3b3b3b',
 		}
 	</script>
 	   <script>
+		   function notworking() {
+			   	  		Swal.fire({
+  title: 'Error',
+  text: "The exploit is broken due to Roblox's weekly update. Please wait until WeAreDevs fixes HexorSploit. This can take a couple of hours to a few days",
+  icon: 'error',
+color: 'white',
+  confirmButtonColor: '#262626',
+  cancelButtonColor: '#ff0000',
+background: '#3b3b3b',
+			)}
+							  }
 getText("https://cors-anywhere.herokuapp.com/https://cdn.wearedevs.net/software/exploitapi/latestdata.json");
 
 async function getText(file) {
@@ -108,21 +119,13 @@ const d = new Date();
 let name = month[d.getMonth()];
   if (status == "true") {
     document.getElementById("status").innerHTML = "The exploit is broken - Please wait while we fix the WRD Exploit API - " + name + " " + d.getDate();
-	  		Swal.fire({
-  title: 'Error',
-  text: "The exploit is broken due to Roblox's weekly update. Please wait until WeAreDevs fixes HexorSploit. This can take a couple of hours to a few days",
-  icon: 'error',
-color: 'white',
-  confirmButtonColor: '#262626',
-  cancelButtonColor: '#ff0000',
-background: '#3b3b3b',
-			)}
-				  }
-				  else  if (status == "true") {
+    notworking();
+}
+  else  if (status == "false") {
       document.getElementById("status").innerHTML = "The exploit is working - " + name + " " + d.getDate();
   }
-    else {
-    	document.getElementById("status").innerHTML = "We could not get if the exploit is broken or not... Try refreshing the page" + name + " " + d.getDate();
+   else {
+    	document.getElementById("status").innerHTML = "We could not get if the exploit is broken or not... Try refreshing the page - " + name + " " + d.getDate();
     }
 }
 </script>

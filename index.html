@@ -108,7 +108,12 @@ color: 'white',
 background: '#3b3b3b',
 			})
 							  }
-getText("https://thingproxy.freeboard.io/fetch/https://cdn.wearedevs.net/software/exploitapi/latestdata.json");
+getText("https://thingproxy.freeboard.io/fetch/https://cdn.wearedevs.net/software/exploitapi/latestdata.json", {
+  method: 'POST',
+  headers: {
+    "Access-Control-Allow-Origin", "https://thingproxy.freeboard.io",
+    "Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept",
+ })
 
 async function getText(file) {
   let myObject = await fetch(file);

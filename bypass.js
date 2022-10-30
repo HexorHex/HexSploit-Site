@@ -42,25 +42,7 @@ customElements.define('x-frame-bypass', class extends HTMLIFrameElement {
 		this.fetchProxy(url, options, 0).then(res => res.text()).then(data => {
 			if (data)
 				this.srcdoc = data.replace(/<head([^>]*)>/i, `<head$1>
-	<base href="${url}">
-	<script>
-	// X-Frame-Bypass navigation event handlers
-	document.addEventListener('click', e => {
-		if (frameElement && document.activeElement && document.activeElement.href) {
-			e.preventDefault()
-			frameElement.load(document.activeElement.href)
-		}
-	})
-	document.addEventListener('submit', e => {
-		if (frameElement && document.activeElement && document.activeElement.form && document.activeElement.form.action) {
-			e.preventDefault()
-			if (document.activeElement.form.method === 'post')
-				frameElement.load(document.activeElement.form.action, {method: 'post', body: new FormData(document.activeElement.form)})
-			else
-				frameElement.load(document.activeElement.form.action + '?' + new URLSearchParams(new FormData(document.activeElement.form)))
-		}
-	})
-	</script>`)
+	<base href="${url}">`)
 		}).catch(e => console.error('Cannot load X-Frame-Bypass:', e))
 	}
 	fetchProxy (url, options, i) {
